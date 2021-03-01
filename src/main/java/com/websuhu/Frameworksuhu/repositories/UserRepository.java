@@ -5,10 +5,13 @@
  */
 package com.websuhu.Frameworksuhu.repositories;
 
+import com.websuhu.Frameworksuhu.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 /**
  *
  * @author Matthew
  */
-public interface UserRepository {
+public interface UserRepository extends JpaRepository<User, Long> {
     
 }
