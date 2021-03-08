@@ -8,6 +8,7 @@ public class FrameworksuhuApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FrameworksuhuApplication.class, args);
+                System.out.println("Program is running");
 	}
 
 }
