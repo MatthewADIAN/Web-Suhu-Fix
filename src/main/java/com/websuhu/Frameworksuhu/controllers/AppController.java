@@ -7,6 +7,7 @@ package com.websuhu.Frameworksuhu.controllers;
 
 import com.websuhu.Frameworksuhu.entities.User;
 import com.websuhu.Frameworksuhu.repositories.UserRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,5 +30,10 @@ public class AppController {
     model.addAttribute("user", new User());
      return "signup_form";
 }
-
+@GetMapping("/users")
+public String listUsers(Model model) {
+    List<User> listUsers = userRepo.findAll();
+    model.addAttribute("listUsers", listUsers);
+    return "users";
+}
 }
